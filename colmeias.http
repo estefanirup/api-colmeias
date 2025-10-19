@@ -1,0 +1,51 @@
+# Variável para a URL base da nossa API de colmeias
+@URL=http://localhost:3000/colmeias
+
+### (CREATE) Registrar uma nova colmeia
+# Ao clicar em "Send Request" aqui, uma nova colmeia será criada.
+# Copie o valor do "_id" que aparecerá na resposta para usar nos testes abaixo.
+POST {{URL}}
+Content-Type: application/json
+
+{
+    "identificador": "C-001-A",
+    "localizacao": "Setor Leste, Fazenda Mel Puro",
+    "peso": 35.5,
+    "temperaturaInterna": 34.2,
+    "umidadeInterna": 65
+}
+
+### (CREATE) Registrar uma segunda colmeia
+POST {{URL}}
+Content-Type: application/json
+
+{
+    "identificador": "C-002-B",
+    "localizacao": "Setor Norte, Fazenda Mel Puro"
+}
+
+
+### (READ) Obter todas as colmeias registradas
+GET {{URL}}
+
+
+### (READ) Obter uma colmeia específica por ID
+# ATENÇÃO: Substitua o ID abaixo por um ID válido retornado na criação de uma colmeia.
+GET {{URL}}/6715b13d2f3e4f6d1a6b2c8e
+
+
+### (UPDATE) Atualizar dados de sensores de uma colmeia
+# ATENÇÃO: Substitua o ID abaixo por um ID válido.
+PUT {{URL}}/6715b13d2f3e4f6d1a6b2c8e
+Content-Type: application/json
+
+{
+    "peso": 38.7,
+    "temperaturaInterna": 35.1,
+    "umidadeInterna": 68
+}
+
+
+### (DELETE) Deletar o registro de uma colmeia
+# ATENÇÃO: Substitua o ID abaixo por um ID válido.
+DELETE {{URL}}/6715b13d2f3e4f6d1a6b2c8e
