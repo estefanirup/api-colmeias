@@ -31,12 +31,12 @@ GET {{URL}}
 
 ### (READ) Obter uma colmeia específica por ID
 # ATENÇÃO: Substitua o ID abaixo por um ID válido retornado na criação de uma colmeia.
-GET {{URL}}/6715b13d2f3e4f6d1a6b2c8e
+GET {{URL}}/68f576d199d6e7858e2843be
 
 
 ### (UPDATE) Atualizar dados de sensores de uma colmeia
 # ATENÇÃO: Substitua o ID abaixo por um ID válido.
-PUT {{URL}}/6715b13d2f3e4f6d1a6b2c8e
+PUT {{URL}}/68f576d199d6e7858e2843be
 Content-Type: application/json
 
 {
@@ -48,4 +48,4 @@ Content-Type: application/json
 
 ### (DELETE) Deletar o registro de uma colmeia
 # ATENÇÃO: Substitua o ID abaixo por um ID válido.
-DELETE {{URL}}/6715b13d2f3e4f6d1a6b2c8e
+DELETE {{URL}}/68f576d199d6e7858e2843be

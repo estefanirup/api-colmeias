@@ -6,6 +6,7 @@ var logger = require('morgan');
 // --- INÍCIO: CONFIGURAÇÃO DO MONGODB ---
 const mongoose = require("mongoose");
 require("dotenv").config(); // Carrega as variáveis do arquivo .env
+console.log("📦 MONGO_URL do .env:", process.env.MONGO_URL);
 
 const { MONGO_URL } = process.env;
 
