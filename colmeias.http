@@ -1,5 +1,5 @@
 # Variável para a URL base da nossa API de colmeias
-@URL=http://localhost:3000/colmeias
+@URL=http://192.168.30.66/api/nosql/colmeias
 
 ### (CREATE) Registrar uma nova colmeia
 # Ao clicar em "Send Request" aqui, uma nova colmeia será criada.
