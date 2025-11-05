@@ -9,7 +9,7 @@ pipeline {
     }
 
     triggers {
-        cron('H 3 * * *') // Executa todos os dias por volta das 3h
+        cron('H 3 30 * *') // Executa todos os dias por volta das 3h
     }
 
     stages {
