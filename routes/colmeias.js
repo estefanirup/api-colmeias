@@ -27,6 +27,7 @@ router.get('/', async (req, res) => {
         const colmeias = await Colmeia.find({});
         res.status(200).json(colmeias); // 200 OK
     } catch (error) {
+        console.log(error)
         res.status(500).json({ message: "Ocorreu um erro interno no servidor.", error });
     }
 });
