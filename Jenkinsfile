@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'api_nosql_service'
         CONTAINER_NAME = 'api_nosql_service'
-        REPO_URL = 'https://github.com/isa-yasmim/apiCultura'
+        REPO_URL = 'https://github.com/estefanirup/api-colmeias'
         EMAIL = 'osvaldo.beltrame.neto@gmail.com'
     }
 
