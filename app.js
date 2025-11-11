@@ -23,7 +23,17 @@ mongoose.connect(MONGO_URL)
         console.error(error);
         process.exit(1);
     });
+
 // --- FIM: CONFIGURAÇÃO DO MONGODB ---
+
+// --- INÍCIO: ADIÇÃO DO CONSUMIDOR RABBITMQ ---
+// Importa a função que criamos
+const { startConsumer } = require('./messaging/consumer');
+
+// Inicia o consumidor
+// Ele ficará rodando em background "ouvindo" a fila
+startConsumer();
+// --- FIM: ADIÇÃO DO CONSUMIDOR RABBITMQ ---
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
