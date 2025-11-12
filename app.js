@@ -14,9 +14,12 @@ if (!MONGO_URL) {
     throw new Error("A variável de ambiente MONGO_URL não está definida!");
 }
 
+const { startConsumer } = require('./messaging/consumer');
+
 mongoose.connect(MONGO_URL)
     .then(() => {
         console.log("Conectado ao MongoDB com sucesso!");
+        startConsumer();
     })
     .catch(error => {
         console.error("Erro na conexão com o MongoDB!");
@@ -25,15 +28,6 @@ mongoose.connect(MONGO_URL)
     });
 
 // --- FIM: CONFIGURAÇÃO DO MONGODB ---
-
-// --- INÍCIO: ADIÇÃO DO CONSUMIDOR RABBITMQ ---
-// Importa a função
-const { startConsumer } = require('./messaging/consumer');
-
-// Inicia o consumidor
-// Ele ficará rodando em background "ouvindo" a fila
-startConsumer();
-// --- FIM: ADIÇÃO DO CONSUMIDOR RABBITMQ ---
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
