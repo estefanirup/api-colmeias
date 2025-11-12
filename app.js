@@ -27,7 +27,7 @@ mongoose.connect(MONGO_URL)
 // --- FIM: CONFIGURAÇÃO DO MONGODB ---
 
 // --- INÍCIO: ADIÇÃO DO CONSUMIDOR RABBITMQ ---
-// Importa a função que criamos
+// Importa a função
 const { startConsumer } = require('./messaging/consumer');
 
 // Inicia o consumidor
