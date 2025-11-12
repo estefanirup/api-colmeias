@@ -16,8 +16,8 @@ async function startConsumer() {
         connection = await amqp.connect(process.env.RABBITMQ_URL);
         console.log("🐇 Conectado ao RabbitMQ com sucesso!");
     } catch (error) {
-        console.error("Erro na conexão com o RabbitMQ!");
-        console.error(error);
+        console.log("Erro na conexão com o RabbitMQ!");
+        console.log(error);
         process.exit(1); // Sai da aplicação se não conseguir conectar
     }
 
