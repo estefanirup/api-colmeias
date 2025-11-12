@@ -1,5 +1,4 @@
 const amqp = require('amqplib');
-require("dotenv").config(); // Garante que o process.env.RABBITMQ_URL seja lido
 
 // Nomes da infraestrutura (DEVEM ser iguais aos da API 1 - Produtor)
 const EXCHANGE_NAME = 'sensors_exchange';
