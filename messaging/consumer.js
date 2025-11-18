@@ -14,7 +14,7 @@ async function startConsumer() {
         }
 
         connection = await amqp.connect(process.env.RABBITMQ_URL);
-        console.log("🐇 Conectado ao RabbitMQ com sucesso!");
+        console.log("Conectado ao RabbitMQ com sucesso!");
     } catch (error) {
         console.log("Erro na conexão com o RabbitMQ!");
         console.log(error);
@@ -48,7 +48,7 @@ async function startConsumer() {
 
                 // --- AQUI É O PROCESSAMENTO ---
                 // (Simulando o envio de e-mail/SMS com um log)
-                console.log("--- 🚨 ALERTA DE SENSOR RECEBIDO (Node.js) 🚨 ---");
+                console.log("------ALERTA RECEBIDO------");
                 console.log("  Tipo de Alerta:", alertDTO.tipoAlerta);
                 console.log("  Sensor ID:", alertDTO.sensorId);
                 console.log("  Valor Registrado:", alertDTO.valorRegistrado);
